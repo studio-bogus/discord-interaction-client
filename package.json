@@ -1,0 +1,44 @@
+{
+  "name": "@studio-bogus/discord-interaction-client",
+  "version": "1.0.0",
+  "description": "Discord interaction rest client designed to work with cloudflare service workers.",
+  "module": "true",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "release": "release-it"
+  },
+  "keywords": [],
+  "author": "Gavenda <gavenda@disroot.org>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "dist/index.d.ts": [
+        "dist/index.d.ts"
+      ],
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20230404.0",
+    "@tsconfig/node18": "2.0.0",
+    "@types/node": "18.16.3",
+    "rimraf": "5.0.0",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "@studio-bogus/logging": "^1.0.1",
+    "discord-snowflake": "2.0.0"
+  }
+}
